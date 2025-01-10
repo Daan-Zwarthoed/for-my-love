@@ -1,10 +1,18 @@
+"use client";
+
 import type { AppProps } from "next/app";
-import { useEffect, useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { customTheme } from "../theme/custom-theme";
+import { customToastOptions } from "../theme/custom-toast-options";
+import Fonts from "../theme/fonts";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
+      <ChakraProvider toastOptions={customToastOptions} theme={customTheme}>
+        <Fonts />
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   );
 }

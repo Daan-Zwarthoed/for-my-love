@@ -1,0 +1,18 @@
+export const INDICES = {
+  hide: -1,
+  auto: "auto",
+  base: 0,
+  docked: 10,
+  sidebar: 1000,
+  dropdown: 1000,
+  fullscreenmap: 1001,
+  sticky: 1100,
+  banner: 1200,
+  overlay: 1300,
+  modal: 1400,
+  popover: 1500,
+  skipLink: 1600,
+  toast: 1700,
+  tooltip: 1800,
+  max: 999999,
+};
