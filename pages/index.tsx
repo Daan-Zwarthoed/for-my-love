@@ -227,7 +227,7 @@ const Home = () => {
             sx={{
               "*": {
                 opacity: showFinale ? 1 : 0,
-                transition: `all ${TRANSITION_TIME}ms`,
+                transition: `opacity ${TRANSITION_TIME}ms`,
                 transitionDelay: `${TRANSITION_TIME}ms`,
               },
             }}
