@@ -70,7 +70,7 @@ export const Confetti = ({ children }: { children: React.ReactNode }) => {
       gsap
         .to(confetti, {
           x: random(20, window.innerWidth - 20),
-          y: -random(40, window.innerHeight - 20),
+          y: -random(20, window.innerHeight - 20),
           duration: 1,
         })
         .eventCallback("onComplete", () => {
@@ -83,7 +83,7 @@ export const Confetti = ({ children }: { children: React.ReactNode }) => {
           // Fall down and clean up
           gsap
             .to(confetti, {
-              y: 0,
+              y: 24,
               ease: Sine.easeIn,
               duration: random(5, 11),
             })
