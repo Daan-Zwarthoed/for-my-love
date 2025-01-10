@@ -6,7 +6,7 @@ function random(min: number, max: number) {
   return min + Math.random() * (max - min);
 }
 
-const randomColors = ["yellow", "red", "green", "orange", "lightblue"];
+const randomColors = ["#e34278", "#a3073b", "#fc2323", "#fa7380", "#e8548a"];
 const randomColorPicker = () => {
   return randomColors[Math.floor(Math.random() * randomColors.length)];
 };
@@ -26,8 +26,10 @@ export const Confetti = ({ children }: { children: React.ReactNode }) => {
   const createConfettiElement = () => {
     const confetti = document.createElement("div");
     confetti.style.position = "absolute";
-    confetti.style.width = "20px";
-    confetti.style.height = "28px";
+    confetti.style.width = "24px";
+    confetti.style.height = "24px";
+
+    confetti.style.clipPath = `path("M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z")`;
     confetti.style.backgroundColor = randomColorPicker();
     return confetti;
   };
