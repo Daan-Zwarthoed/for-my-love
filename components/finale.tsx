@@ -24,7 +24,6 @@ export function Finale() {
       left={0}
       zIndex={2000}
       flexDirection="column"
-      backdropFilter="blur(10px)"
       overflow="hidden"
       px={5}
     >

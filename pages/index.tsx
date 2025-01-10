@@ -209,20 +209,32 @@ const Home = () => {
               <CloseIcon />
             </Box>
           )}
-
           <Box
-            zIndex={4000}
+            zIndex={1999}
+            position="absolute"
+            top={0}
+            left={0}
+            height="100vh"
+            w="100vw"
+            backdropFilter="blur(10px)"
+            pointerEvents="none"
+            opacity={showFinale ? 1 : 0}
+            transition={`all ${TRANSITION_TIME}ms`}
+            transitionDelay={`${TRANSITION_TIME}ms`}
+          />
+          <Box
             pointerEvents={showFinale ? "all" : "none"}
             sx={{
               "*": {
                 opacity: showFinale ? 1 : 0,
-                transition: `opacity ${TRANSITION_TIME}ms`,
+                transition: `all ${TRANSITION_TIME}ms`,
                 transitionDelay: `${TRANSITION_TIME}ms`,
               },
             }}
           >
             <Finale />
           </Box>
+
           <Flex
             position="relative"
             transformOrigin="top left"
